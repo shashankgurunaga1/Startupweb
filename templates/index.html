@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css"> 
+    <title>SYMBIOSIS</title>
+</head>
+
+<body>
+    <!-- header plus welcome -->
+    <div class="background">
+        <div class="max">
+            <div class="nav">
+		    <img src="https://drive.google.com/uc?export=view&id=1M3vTJLRLE301-LxPdAFiHwqSkFqWBp8_" width="100px" alt="">
+                <div class="navbar" id="navbar">
+                    <ul>
+                    <li><a href="{{url_for('index')}}">Home</a></li>
+
+                        <li><a href="{{url_for('get_contact')}}">Contact Us</a></li>
+                        <li><a href="{{url_for('get_about')}}">About</a></li>
+		    </ul>
+                </div>
+                <div id="menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="welcome">
+                <div class="left">
+                    <h2>Welcome to</h2>
+                    <h1>SYMBIOSIS</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur elit. Ex magni illo neque, <br> est officia minus
+                        suscipit? Reiciendis voluptatem nihil vero.</p>
+                    <div class="btn">
+			    <form method="post" action="/">
+				     <button type="button"class="login" onclick="window.location.href='{{ url_for( 'login' ) }}';">Startup login</button>
+                            <button type="button"class="login margin" onclick="window.location.href='{{ url_for( 'login_helper' ) }}';">Helper login</button>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="right">
+	
+			<img src="https://drive.google.com/uc?export=view&id=1Ut8nWxGQYJkIq-U9GiyhVbFIOISCOhaZ"
+			  width="600px"  alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="back">
+        <div class="max">
+            <div class="footer">
+                <div class="col">
+                    <img src="https://drive.google.com/uc?export=view&id=1M3vTJLRLE301-LxPdAFiHwqSkFqWBp8_" width="100px" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolnatur, esse officiis. Veniam totam aut possimus corrupti! adipisicing elit. Nulla, repudiandae?
+                    </p>
+                </div>
+                <div class="col">
+                    <ul>
+                    <li><a href="{{url_for('index')}}">Home</a></li>
+
+                        <li><a href="{{url_for('get_contact')}}">Contact Us</a></li>
+                        <li><a href="{{url_for('get_about')}}">About</a></li></ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copy">Copyright © SYMBIOSIS 2022</p>
+        </div>
+    </div>
+    <script>
+        const nav=document.getElementById('navbar')
+        // nav.style.maxHeight="0%"
+        document.getElementById('menu').addEventListener('click',()=>{
+            if(nav.style.maxHeight=="0%") {
+                nav.style.maxHeight="100%"
+            }
+            else {
+                nav.style.maxHeight="0%"
+            }
+        })
+    </script>
+</body>
+
+</html>

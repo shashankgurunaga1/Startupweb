@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.max{
+    max-width: 1200px;
+    margin: auto;
+}
+.max-2{
+    background: #f7955b;
+}
+.nav{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.navbar{
+    flex: 1;
+    transition: max-height 0.5s ease-in-out;
+}
+.navbar ul{
+    text-align: right;
+    list-style: none;
+}
+.navbar ul li{
+    display: inline-block;
+    margin-right:20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    transition: border-bottom 0.1s ease-in-out;
+}
+.navbar ul li a:hover{
+    border-bottom: 2px solid black;
+}
+#contact{
+   border-bottom: 0px;
+    border-radius: 60px;
+    color: white;
+}
+#contacthead{
+   
+    height: 300px;
+    width: 100%;
+    top: 0px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: radial-gradient(#f1e1c2,#f7955b);
+
+}
+#contacthead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 6px;
+    color: white;
+    flex-direction: column;
+    color: black;
+}
+#contacthead p{
+    padding: 2px 6px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+#contactus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(#f1e1c2,#fbfafa);
+}
+#contact-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    align-items: center; 
+    margin: 20px ;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-shadow: -5px -6px 57px #d94e0f;
+}
+.contact-method{
+    padding: 8px;
+}
+#contact h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.8rem;
+    color: rgb(98, 8, 88);
+    margin-top: 44px;   
+}
+#menu{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+}
+.line{
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 6px;
+}
+
+#insta{
+    padding: 29px;
+}
+
+#contact-box img{
+    width: 66px;
+    padding: 1px;
+    margin: 8px;
+    height: auto;
+}
+.back{
+    background: black;
+    position: absolute;
+    width: 100%;
+}
+.footer{
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.col{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.col p{
+    padding: 20px 80px;
+    color: grey;
+}
+.col ul{
+    list-style: none;
+}
+.col ul li{
+    margin-bottom: 10px;
+}
+.col ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+.col ul li a:hover{
+    text-decoration: underline;
+}
+.copy{
+    padding: 20px;
+    text-align: center;
+    color: grey;
+}
+
+
+@media only screen and (max-width:500px){
+    #menu{
+        display: flex;
+        margin-left: 200px;
+    }
+    .navbar{
+        position: absolute;
+        right:0;
+        top: 80px;
+        width: 100%;
+        overflow: hidden;
+        background: black;
+    }
+    .navbar ul li{
+        display: block;
+        margin-top: 10px;
+        margin-right: 40px;
+        padding: 10px;
+    }
+    .navbar ul li a{
+        color: white;
+    }
+    .left{
+        flex-basis: 100%;
+
+    }
+    .right img{
+        width: 100%;
+    }
+    .right{
+        flex-basis: 100%;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+}

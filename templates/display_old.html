@@ -1,0 +1,81 @@
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Display Startup Info</title>
+    </head>
+    <body bgcolor="#e6ffee">
+        <div class="one">
+            <div class="nav">
+                <img src="../static/logo-white-01.png" width="100px" alt="">
+                <div class="navbar" id="navbar">
+                    <ul>
+                        <li><a href="{{url_for('index')}}">Home</a></li>
+
+                        <li><a href="{{url_for('get_contact')}}">Contact Us</a></li>
+                        <li><a href="{{url_for('get_about')}}">About</a></li>
+                    </ul>
+                </div>
+                <div id="menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div> 
+            <div class="content" align="center">
+                <div class="topbar">
+                    <h2>Welcome to Startup Info Display Page! </h2>                        
+                </div>  </br>
+                <div class="contentbar">
+                
+                    <h1>Startup  Details</h1>    </br>
+                     {% block content %}
+                        <div class="border">
+                            <table class="worddark"></br></br></br></br>
+                                <tr>
+                                    <td>Username:</td>
+                                    <td>{{ data['username'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Company Name:</td>
+                                    <td>{{ data['comp_name'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Company Address :</td>
+                                    <td>{{ data['address'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Company EMail :</td>
+                                    <td>{{ data['company_email'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Phone:</td>
+                                    <td>{{ data['phone'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Product Details:</td>
+                                    <td>{{ data['product_desc'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Contact Person Email :</td>
+                                    <td>{{ data['contact_person_email'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Support Needed:</td>
+                                    <td>{{ data['Support_needed'] }}</td>
+                                </tr>  
+                                <tr>
+                                    <td>Website:</td>
+                                    <td>{{ data['Website'] }}</td>
+                                </tr>                          
+                            </table>
+                        </div>
+                    {% endblock %}                                           
+                </div>
+                  
+            </div>
+        </div>
+    </body>
+</html>
